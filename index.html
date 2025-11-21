@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MSF Solucoes em Construcoes - Metal Sao Francisco. Expert nonresidential construction and metal design solutions in Brasilia, DF. Led by Camila Do Nascimento Silva.">
+    <title>MSF SOLUCOES | Metal & Construction</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Teko:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           1. VARIABLES & RESET
+           ========================================= */
+        :root {
+            --primary-navy: #2c3e50;        /* Deep Navy - Professionalism */
+            --metallic-silver: #95a5a6;     /* Steel/Metal Element */
+            --accent-blue: #3498db;         /* Architectural Blue */
+            --bg-light: #ecf0f1;            /* Light Concrete */
+            --text-dark: #2d3436;
+            --white: #ffffff;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Teko', sans-serif;
+            text-transform: uppercase;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        a { text-decoration: none; transition: 0.3s; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* =========================================
+           2. UTILITIES
+           ========================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header span {
+            display: block;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 40px;
+            background-color: var(--primary-navy);
+            color: var(--white);
+            font-family: 'Teko', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--primary-navy);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-navy);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-navy);
+        }
+
+        /* =========================================
+           3. HEADER
+           ========================================= */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Teko', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: var(--primary-navy);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* =========================================
+           4. HERO SECTION
+           ========================================= */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.6)),
+                        url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); /* Steel Structure */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: #bdc3c7;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 20px;
+        }
+
+        /* =========================================
+           5. ABOUT US
+           ========================================= */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .principal-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--bg-light);
+            border-left: 5px solid var(--primary-navy);
+        }
+
+        .principal-box h4 {
+            margin-bottom: 5px;
+            font-size: 1.4rem;
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            border-radius: 2px;
+            box-shadow: 20px 20px 0 var(--metallic-silver);
+        }
+
+        /* =========================================
+           6. SERVICES
+           ========================================= */
+        .services {
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-top: 4px solid transparent;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            border-top-color: var(--accent-blue);
+            transform: translateY(-10px);
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-navy);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* =========================================
+           7. ADVANTAGES
+           ========================================= */
+        .advantages {
+            background-color: var(--primary-navy);
+            color: var(--white);
+        }
+
+        .advantages .section-header h2 { color: var(--white); }
+        .advantages .section-header span { color: var(--accent-blue); }
+
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .adv-item {
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .adv-item h4 {
+            color: var(--accent-blue);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .adv-item p {
+            color: #bdc3c7;
+            font-weight: 300;
+        }
+
+        /* =========================================
+           8. PROCESS
+           ========================================= */
+        .process {
+            background-color: var(--white);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--metallic-silver);
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            background: var(--white);
+            padding: 0 15px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border: 2px solid var(--primary-navy);
+            color: var(--primary-navy);
+            font-family: 'Teko', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        /* =========================================
+           9. CONTACT FORM
+           ========================================= */
+        .contact {
+            background-color: var(--bg-light);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            background: var(--white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .contact-info {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 60px;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+        }
+
+        .info-item label {
+            display: block;
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .contact-form {
+            padding: 60px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: #fff;
+        }
+
+        textarea.form-control {
+            height: 150px;
+            resize: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            border: none;
+        }
+
+        /* =========================================
+           10. FOOTER
+           ========================================= */
+        footer {
+            background-color: #222;
+            color: #777;
+            padding: 60px 0 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-brand {
+            font-family: 'Teko', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 3.5rem; }
+            .about-grid, .services-grid, .adv-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .process-steps { flex-direction: column; gap: 40px; }
+            .process-steps::before { display: none; }
+            .step { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">MSF <span>SOLUCOES</span></div>
+            <nav class="nav-links">
+                <a href="#about">Company</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Strength in Structure.<br>Excellence in Design.</h1>
+            <p>Metal Sao Francisco Solucoes em Construcoes e Design Ltda delivers robust nonresidential building solutions in Brasilia. We build the frameworks for the future.</p>
+            <a href="#contact" class="btn btn-outline">Request Proposal</a>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-header" style="text-align: left; margin: 0 0 30px 0;">
+                        <span>About Us</span>
+                        <h2>Building Brasilia's Modern Legacy</h2>
+                    </div>
+                    <p>Metal Sao Francisco Solucoes em Construcoes e Design Ltda (MSF Solucoes) is a premier construction firm based in the heart of Brasilia, Distrito Federal. Specializing in the nonresidential sector, we bring a focus on durability and modern aesthetics.</p>
+                    <p>Under the leadership of Camila Do Nascimento Silva, our company has established itself as a reliable partner for commercial and industrial projects. We combine the strength of metal construction with sophisticated design principles to create functional, lasting structures.</p>
+                    <p>Whether it involves steel framework, structural upgrades, or complete commercial builds, MSF Solucoes applies rigorous engineering standards to every project.</p>
+                    
+                    <div class="principal-box">
+                        <h4>Camila Do Nascimento Silva</h4>
+                        <p style="margin:0; font-size: 0.9rem; text-transform: uppercase; color: #7f8c8d;">Key Principal & Director</p>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Metal Construction Structure">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span>What We Do</span>
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-wrapper">&#9874;</div> <h3>Nonresidential Construction</h3>
+                    <p>Complete execution of commercial buildings, warehouses, and office complexes. We manage the entire build process from foundation to finish in Brasilia.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper">&#127962;</div> <h3>Metal Solutions</h3>
+                    <p>Specialized design and installation of metal structures and steel frameworks. We provide lightweight, durable solutions for modern architectural needs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper">&#128208;</div> <h3>Design & Engineering</h3>
+                    <p>Integrated project planning. We align structural engineering with architectural design to ensure feasibility, safety, and visual impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span style="color: var(--accent-blue);">Why Choose MSF</span>
+                <h2 style="color: var(--white);">The MSF Standard</h2>
+            </div>
+            <div class="adv-grid">
+                <div class="adv-item">
+                    <h4>Structural Integrity</h4>
+                    <p>Our name stands for Metal Sao Francisco, representing our commitment to strong materials. We prioritize safety and longevity in every build.</p>
+                </div>
+                <div class="adv-item">
+                    <h4>Capital Expertise</h4>
+                    <p>Based in Brasilia, we understand the unique architectural language and regulatory environment of the Distrito Federal.</p>
+                </div>
+                <div class="adv-item">
+                    <h4>Design-Build Synergy</h4>
+                    <p>By offering both "Construcoes" and "Design," we bridge the gap between concept and reality, reducing errors and speeding up delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span>Workflow</span>
+                <h2>Our Approach</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h3>Consultation</h3>
+                    <p>We meet to understand your project requirements and assess the site conditions in Brasilia.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h3>Design & Plan</h3>
+                    <p>Our team creates technical drawings and structural plans, focusing on efficient metal integration.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h3>Construction</h3>
+                    <p>We execute the build with precision management, ensuring quality and adherence to timelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Start Your Project</h3>
+                    <p style="color: #bdc3c7; margin-bottom: 30px;">Looking for reliable construction services in Brasilia? Contact MSF Solucoes today.</p>
+                    
+                    <div class="info-item">
+                        <label>Location</label>
+                        Brasilia, Distrito Federal<br>Brazil
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        info@metalsaofranciscosolucoes.info
+                    </div>
+                    <div class="info-item">
+                        <label>Principal</label>
+                        Camila Do Nascimento Silva
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name / Company" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Project Type (e.g. Steel Structure)">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-brand" style="font-family: 'Teko', sans-serif; font-size: 2rem; color: #fff; margin-bottom: 10px;">MSF SOLUCOES</div>
+            <p>&copy; 2023 Metal Sao Francisco Solucoes em Construcoes e Design Ltda. All Rights Reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.6;">Brasilia, DF | info@metalsaofranciscosolucoes.info</p>
+        </div>
+    </footer>
+
+</body>
+</html>
